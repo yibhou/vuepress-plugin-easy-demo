@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-plugin-easy-demo",
+  "name": "@learners/vuepress-plugin-easy-demo",
   "version": "0.0.1",
   "type": "module",
   "main": "src/node/index.js",
@@ -8,8 +8,7 @@
   "author": "linmingjie",
   "license": "MIT",
   "keywords": [
-    "vuepress-plugin",
-    "code-examples"
+    "vuepress-plugin"
   ],
   "devDependencies": {
     "@vuepress/helper": "2.0.0-rc.47",
