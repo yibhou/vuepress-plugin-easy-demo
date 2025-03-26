@@ -1,0 +1,122 @@
+:root {
+  --demo-color-primary: var(--vp-c-accent);
+  --demo-color-primary-hover: var(--vp-c-accent-hover);
+  --demo-bg: var(--vp-c-bg);
+  --demo-text: var(--vp-c-text);
+  --demo-border-color: var(--vp-c-border);
+  --demo-border-radius-base: 4px;
+  --demo-transition-duration: 0.3s;
+}
+
+[data-theme='dark'] {
+  --demo-bg: var(--shiki-dark-bg);
+}
+
+.demo-layout {
+  margin: 1em auto;
+  color: var(--demo-text);
+  background-color: var(--demo-bg);
+  border: 1px solid var(--demo-border-color);
+  border-radius: var(--demo-border-radius-base);
+
+  .demo-title {
+    height: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid var(--demo-border-color);
+    p {
+      margin: 0;
+      line-height: 1;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+  .demo-showcase {
+    padding: 1.5rem;
+    margin: 0.5px;
+  }
+  .demo-btns {
+    height: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    border-top: 1px solid var(--demo-border-color);
+    .demo-btn {
+      height: 1em;
+      width: 1em;
+      line-height: 1em;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--demo-text);
+      font-style: normal;
+      opacity: 0.6;
+      cursor: pointer;
+      margin: 0 0.5rem;
+      &:hover,
+      &.demo-copy-code-btn.copied {
+        opacity: 0.8;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      svg {
+        height: 1em;
+        width: 1em;
+        pointer-events: none;
+      }
+    }
+  }
+  .demo-source {
+    div[class*='language-'] {
+      margin-top: 0;
+      margin-bottom: 0;
+      border-radius: 0;
+      &:not(:first-child) {
+        border-top: 2px dotted var(--demo-border-color);
+      }
+    }
+  }
+  .demo-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    box-sizing: border-box;
+    position: sticky;
+    bottom: -2px;
+    z-index: 10;
+    margin-top: -1px;
+    background-color: var(--demo-bg);
+    border-top: 1px solid var(--demo-border-color);
+    border-bottom-left-radius: var(--demo-border-radius-base);
+    border-bottom-right-radius: var(--demo-border-radius-base);
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--demo-color-primary);
+    &:hover {
+      color: var(--demo-color-primary-hover);
+    }
+  }
+
+  .demo-collapse-transition {
+    &-enter-active,
+    &-leave-active {
+      transition: max-height var(--demo-transition-duration) ease;
+      overflow: hidden;
+    }
+  }
+  .demo-fade-transition {
+    &-enter-active,
+    &-leave-active {
+      transition: opacity 0.2s linear;
+    }
+    &-enter-from,
+    &-leave-to {
+      opacity: 0;
+    }
+  }
+}
