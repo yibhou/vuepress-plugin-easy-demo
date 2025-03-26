@@ -1,0 +1,23 @@
+{
+  "name": "vuepress-plugin-easy-demo",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "src/node/index.js",
+  "module": "src/node/index.js",
+  "types": "src/node/index.d.ts",
+  "author": "linmingjie",
+  "license": "MIT",
+  "keywords": [
+    "vuepress-plugin",
+  ],
+  "devDependencies": {
+    "@vuepress/helper": "2.0.0-rc.47",
+    "@vuepress/plugin-register-components": "2.0.0-rc.44",
+    "@vueuse/core": "^10.11.0",
+    "chokidar": "^3.6.0",
+    "markdown-it-container": "^4.0.0"
+  },
+  "peerDependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}
